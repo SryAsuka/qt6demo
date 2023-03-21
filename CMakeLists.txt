@@ -1,26 +1,27 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(finddialog VERSION 0.1 LANGUAGES CXX)
+project(GotoCell VERSION 0.1 LANGUAGES CXX)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
 qt_standard_project_setup()
 
-qt_add_executable(finddialog)
+qt_add_executable(GotoCell)
 
-target_sources(finddialog
+target_sources(GotoCell
     PRIVATE
         main.cpp
-        finddialog.cpp
-        finddialog.h
+        dialog.cpp
+        dialog.h
+        dialog.ui
         
     PUBLIC
         
 )
 
-target_compile_features(finddialog PRIVATE cxx_std_20)
+target_compile_features(GotoCell PRIVATE cxx_std_20)
 
-target_link_libraries(finddialog 
+target_link_libraries(GotoCell 
     PRIVATE 
         Qt6::Widgets
 )
@@ -68,7 +69,7 @@ target_link_libraries(finddialog
 
 
 
-# set_target_properties(finddialog PROPERTIES
+# set_target_properties(GotoCell PROPERTIES
 #     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
 #     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
 #     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -76,19 +77,19 @@ target_link_libraries(finddialog
 #     WIN32_EXECUTABLE TRUE
 # )
 
-# install(TARGETS finddialog
+# install(TARGETS GotoCell
 #     BUNDLE DESTINATION .
 #     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 # if(QT_VERSION_MAJOR EQUAL 6)
-#     qt_finalize_executable(finddialog)
+#     qt_finalize_executable(GotoCell)
 # endif()
 
 
 
 
 
-#qt_add_executable(finddialog)  //Creates and finalizes an application target of a platform-specific type.
+#qt_add_executable(GotoCell)  //Creates and finalizes an application target of a platform-specific type.
 #This command performs the following tasks:
 
 #    1. Create a CMake target of the appropriate type for the target platform.
