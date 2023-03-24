@@ -1,6 +1,6 @@
 //author : Linxinhang
 //date : 2023.3.15
-//project : GotoCell is designed by Qt Designer
+//project : GotoCell is designed by Qt Designer.使用智能指针
 //version 0.1.0
 
 #include "dialog.h"
